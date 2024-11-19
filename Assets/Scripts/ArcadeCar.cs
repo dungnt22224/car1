@@ -585,6 +585,85 @@ public class ArcadeCar : MonoBehaviour
             axles[0].steerAngle = ang;
         }
     }
+    public void SetInputs(float verticalInput, float horizontalInput)
+    {
+        float v = verticalInput;
+        float h = horizontalInput;
+
+        bool isBrakeNow = false;
+        bool isHandBrakeNow = false;
+
+        float speed = GetSpeed();
+        isAcceleration = false;
+        isReverseAcceleration = false;
+
+        if (v > 0.4f)
+        {
+            if (speed < -0.5f)
+            {
+                isBrakeNow = true;
+            }
+            else
+            {
+                isAcceleration = true;
+            }
+        }
+        else if (v < -0.4f)
+        {
+            if (speed > 0.5f)
+            {
+                isBrakeNow = true;
+            }
+            else
+            {
+                isReverseAcceleration = true;
+            }
+        }
+
+        // Tương tự như UpdateInput(), xử lý thắng và góc lái
+        if (Mathf.Abs(h) > 0.001f)
+        {
+            float speedKmH = Mathf.Abs(speed) * 3.6f;
+            float steerSpeed = steeringSpeed.Evaluate(speedKmH);
+
+            float newSteerAngle = axles[0].steerAngle + (h * steerSpeed);
+            float sgn = Mathf.Sign(newSteerAngle);
+
+            float steerLimit = GetSteerAngleLimitInDeg(speed);
+            newSteerAngle = Mathf.Min(Math.Abs(newSteerAngle), steerLimit) * sgn;
+
+            axles[0].steerAngle = newSteerAngle;
+        }
+        else
+        {
+            float speedKmH = Mathf.Abs(speed) * 3.6f;
+            float angleReturnSpeedDegPerSec = steeringResetSpeed.Evaluate(speedKmH);
+
+            float ang = axles[0].steerAngle;
+            float sgn = Mathf.Sign(ang);
+
+            ang = Mathf.Abs(ang);
+            ang -= angleReturnSpeedDegPerSec * Time.fixedDeltaTime;
+            ang = Mathf.Max(ang, 0.0f) * sgn;
+
+            axles[0].steerAngle = ang;
+        }
+
+        // Cập nhật trạng thái thắng và phanh tay
+        isBrake = isBrakeNow;
+        isHandBrake = isHandBrakeNow && !isAcceleration && !isReverseAcceleration;
+
+        axles[0].brakeLeft = isBrake;
+        axles[0].brakeRight = isBrake;
+        axles[1].brakeLeft = isBrake;
+        axles[1].brakeRight = isBrake;
+
+        axles[0].handBrakeLeft = isHandBrake;
+        axles[0].handBrakeRight = isHandBrake;
+        axles[1].handBrakeLeft = isHandBrake;
+        axles[1].handBrakeRight = isHandBrake;
+    }
+
 
     void Update()
     {

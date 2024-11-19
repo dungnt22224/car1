@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\Unity\\Projects\\Car\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4F9212E2-498F-3E17-88EB-5F55920B82A0}|Assembly-CSharp.csproj|e:\\unity\\projects\\car\\assets\\scripts\\autocarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F9212E2-498F-3E17-88EB-5F55920B82A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\autocarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4F9212E2-498F-3E17-88EB-5F55920B82A0}|Assembly-CSharp.csproj|e:\\unity\\projects\\car\\assets\\scripts\\arcadecar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F9212E2-498F-3E17-88EB-5F55920B82A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\arcadecar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -49,14 +53,31 @@
               "Name": "ST:9:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AutoCarController.cs",
+              "DocumentMoniker": "E:\\Unity\\Projects\\Car\\Assets\\Scripts\\AutoCarController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AutoCarController.cs",
+              "ToolTip": "E:\\Unity\\Projects\\Car\\Assets\\Scripts\\AutoCarController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AutoCarController.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAkwIUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T03:04:56.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ArcadeCar.cs",
               "DocumentMoniker": "E:\\Unity\\Projects\\Car\\Assets\\Scripts\\ArcadeCar.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ArcadeCar.cs",
               "ToolTip": "E:\\Unity\\Projects\\Car\\Assets\\Scripts\\ArcadeCar.cs",
               "RelativeToolTip": "Assets\\Scripts\\ArcadeCar.cs",
-              "ViewState": "AgIAAO0EAAAAAAAAAAAkwAUFAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkEAAAAAAAAAAArwCsEAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T02:54:02.916Z",
               "EditorCaption": ""

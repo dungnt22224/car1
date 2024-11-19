@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\CameraCar.cs" />
     <Compile Include="Assets\Scripts\CameraTrigger.cs" />
     <Compile Include="Assets\Scripts\ArcadeCar.cs" />
+    <Compile Include="Assets\Scripts\AutoCarController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
